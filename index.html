@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +26,33 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         <p>$0.00</p>
         <i class="fa-solid fa-cart-shopping"></i>
-        <p>Log In</p>
+        <a href="#Sign In" onclick="signIn(this)"> Sign In</a>
     </div>
 </header>
 <!--HOME SECTION-->
 <section>
+    <!-- Form Log In  -->
+    <div class="sign-in-container">
+        <div class="close-form">
+            <div class="circle" onclick="FormClose(this)">
+                <a href="">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="form-header">
+            <h2>Sign In</h2>
+        </div>
+        <div class="form-body">
+            <label class="lbl" for="username"> Enter Your Name</label>
+            <input class="inp" type="text" id="username" placeholder="Enter Your Username">
+            <label class="lbl" for="password"> Enter Your password</label>
+            <input class="inp" type="password" id="password" placeholder="Enter Your Password">
+            <p>Forget Password</p>
+            <button class="btn"  onclick="FormClose(this)"> Sign In</button>
+        </div>
+    </div>
     <div class="Home" id="home">
         <div class="col-6">
             <p>Black Friday Is July</p>
@@ -82,7 +105,7 @@
                 <div class="item-name">
                     <h3>Table</h3>
                 </div>
-            </div>  
+            </div>
         </div>
     </div>
 </section>
@@ -159,6 +182,17 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, totam!</p>
             </div>
         </div>
+        <div class="icon-container">
+            <div class="icon-box flex">
+                <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100066635430719&mibextid=ZbWKwL" title="Facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="+917383433287" title="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/henil__27?igsh=eHQ2NzNrYndtcHZt" title="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+
+        </div>
         <footer class="flex">
             <div class="footer-partitions">
                 <h3>FURNITURE</h3>
@@ -186,9 +220,19 @@
                     <a href="#">Track Order</a>
                     <a href="#">Help</a>
                 </div>
-            </div>
         </footer>
     </div>
 </section>
+<script>
+    function signIn(data) {
+        let sign = document.querySelector(".sign-in-container");
+        sign.style.display = "block";
+    }
+    function FormClose(data){
+        let close=document.querySelector(".sign-in-container");
+        close.style.display="none";
+    }
+</script>
 </body>
+
 </html>
