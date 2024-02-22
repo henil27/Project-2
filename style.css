@@ -75,7 +75,6 @@ header nav ul li:hover a {
     margin-left: 100px;
     font-size: 36px;
     letter-spacing: 3px;
-    transition: 1s;
 }
 
 header .Search-Engine {
@@ -87,6 +86,20 @@ header .Search-Engine {
     justify-content: space-around;
 }
 
+.Search-Engine a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.Search-Engine a:hover {
+    background-color: whitesmoke;
+}
+
 section {
     width: 100%;
     height: 100vh;
@@ -94,6 +107,102 @@ section {
     overflow: hidden;
 }
 
+.sign-in-container {
+    position: fixed;
+    display: none;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 50%;
+    border: 1px solid black;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: lightblue;
+}
+.close-form{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: -28px;
+    right: -22px;
+}
+.close-form .circle{
+    padding: 5px;
+    border: 2px solid transparent;
+transition: .1s;
+
+}
+.close-form .circle:hover{
+    border: 2px solid black;
+    background-color: white;
+}
+.close-form .circle:active{
+    background-color: red;
+    border: 2px solid black;
+    
+}
+.close-form i{
+    font-size: 22px;
+}
+.close-form a{
+    color: black;
+}
+.sign-in-container .form-header {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+.sign-in-container .form-header h2 {
+    font-size: 44px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sign-in-container .form-body {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    flex-direction: column;
+}
+.sign-in-container .form-body .inp{
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    height: 30px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left:10px ;
+}
+.sign-in-container .form-body .lbl{
+    width: 100%;
+    cursor: pointer;
+    height: 20px;
+
+}
+.sign-in-container .form-body .btn{
+    width: 100px; 
+    height: 30px;
+    background-color: rgb(27, 91, 112);
+    color: white;
+    border: 2px solid white;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.sign-in-container .form-body .btn:hover{
+    background-color: white;
+    color: black;
+}
 section .Home {
     width: 100%;
     height: 100%;
@@ -139,6 +248,7 @@ section .Home {
     background-color: #00008b86;
     color: white;
     border: 2px solid white;
+    cursor: pointer;
 }
 
 .about {
@@ -174,6 +284,7 @@ section .Home {
     justify-content: center;
     align-items: center;
 }
+
 .product-item-box {
     width: 320px;
     height: 320px;
@@ -184,9 +295,11 @@ section .Home {
     overflow: hidden;
     transition: .7s;
 }
-.product-item-box:hover{
+
+.product-item-box:hover {
     box-shadow: 0 0 30px black;
 }
+
 .img-item {
     width: 100%;
     height: 100%;
@@ -194,14 +307,17 @@ section .Home {
     overflow: hidden;
     background-position: center;
 }
+
 .img-item img {
     width: 100%;
     height: 100%;
     transition: .7s;
 }
+
 .img-item img:hover {
     transform: scale(1.1);
 }
+
 .item-name {
     position: relative;
     top: -70px;
@@ -214,15 +330,18 @@ section .Home {
     align-items: center;
     border: 1px solid black;
 }
+
 .item-name h3 {
     font-size: 22px;
     font-weight: 600;
 }
+
 /* collection Box */
 .box-collection {
     width: 100%;
     height: 100%;
 }
+
 .headerNAme {
     width: 100%;
     height: 20%;
@@ -231,6 +350,7 @@ section .Home {
     align-items: center;
     flex-direction: column;
 }
+
 .headerNAme h2 {
     font-size: 34px;
     background-color: rgba(173, 216, 230, 0.24);
@@ -242,10 +362,12 @@ section .Home {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
+
 .colection-type {
     width: 100%;
     height: 80%;
 }
+
 .colection-type .row-explorepage {
     width: 100%;
     height: 50%;
@@ -256,6 +378,7 @@ section .Home {
     flex-direction: row;
     justify-content: space-around;
 }
+
 .colection-type .row-explorepage .box-collection-item {
     width: 300px;
     height: 80%;
@@ -267,6 +390,7 @@ section .Home {
     cursor: pointer;
     transition: .4s;
 }
+
 .box-collection-item:hover {
     background-color: lightgrey;
     z-index: -1px;
@@ -277,6 +401,7 @@ section .Home {
     color: rgba(1, 1, 51, 0.849);
     margin-bottom: 20px;
 }
+
 .box-collection-item p {
     font-size: 28px;
     color: rgba(0, 0, 0, 0.767);
@@ -284,12 +409,12 @@ section .Home {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
 }
+
 .information {
     width: 100%;
     height: 100%;
     background-color: #f3eadead;
     padding-top: 55px;
-
 }
 
 .information p {
@@ -297,6 +422,11 @@ section .Home {
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.information p:hover {
+    text-decoration: underline;
+}
+
 .information h2 {
     text-align: center;
     font-weight: 500;
@@ -304,13 +434,13 @@ section .Home {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 44px;
 }
+
 .information .row {
     width: 100%;
     padding: 0 120px;
     margin-top: 100px;
     height: 350px;
     justify-content: space-around;
-
 }
 
 .information .row .services-box {
@@ -329,6 +459,7 @@ section .Home {
     background-color: lightgray;
     z-index: -1px;
 }
+
 @keyframes Zigzag {
     0% {
         transform: translateY(0px);
@@ -342,29 +473,55 @@ section .Home {
         transform: translateY(0px);
     }
 }
+
 .services-box i {
     font-size: 44px;
     margin-bottom: 10px;
 }
+
 .services-box h3 {
     font-size: 24px;
 }
+
 .services-box p {
     font-size: 12px;
     text-align: center;
     margin-top: 10px;
 }
+.icon-container{
+    width: 100%;
+    height: 30px;
+    border-top: 2px solid rgba(0, 0, 0, 0.158);
+    background-color: lightgrey;
+    display: flex;
+    justify-content: end;
+
+}
+.icon-container .icon-box{
+    width: 15%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.icon-container .icon-box i{
+    font-size: 22px;
+    color: black;
+}
+footer{
+    width: 100%;
+    height: 100vh;
+}
 .information footer {
     width: 100%;
     height: 375px;
     background-color: lightgrey;
-    border-top: 2px solid rgba(0, 0, 0, 0.158);
 }
+
 .information footer .footer-partitions {
     width: 50%;
-    height: 100%;
+    height: 80%;
     padding: 25px;
 }
+
 .footer-partitions h3 {
     font-size: 24px;
     font-weight: 700;
@@ -372,6 +529,11 @@ section .Home {
     letter-spacing: 4px;
     position: absolute;
 }
+
+.footer-partitions {
+    height: 240px;
+}
+
 .footer-partitions span {
     position: relative;
     top: 28px;
@@ -379,17 +541,20 @@ section .Home {
     letter-spacing: 3px;
     font-weight: 500;
 }
+
 .footer-partitions .col-4 {
     width: 33.33%;
     height: 100%;
     flex-direction: column;
     justify-content: start;
 }
+
 .footer-partitions .col-4 h4 {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
 }
+
 .footer-partitions .col-4 a {
     text-align: center;
     text-decoration: none;
@@ -397,16 +562,8 @@ section .Home {
     color: dimgray;
     transition: .2s;
 }
-.footer-partitions .col-4 a:hover{
+
+.footer-partitions .col-4 a:hover {
     color: rgba(37, 19, 19, 0.966);
     font-size: 20px;
-
 }
-/* .footer-border {
-    width: 100%;
-    height: 3px;
-    position: relative;
-    top: -10px;
-    background-color: black;
-    display: inline-block;
-} */
